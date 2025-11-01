@@ -160,7 +160,7 @@ ul {
 .task-item {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding: 16px;
   margin-bottom: 12px;
   background-color: #F9FAFB;
@@ -228,6 +228,7 @@ input[type="checkbox"] {
   font-size: 1.1rem;
 }
 
+
 @media (max-width: 640px) {
   .main-layout {
     padding: 15px;
@@ -243,7 +244,6 @@ input[type="checkbox"] {
   }
 
   .task-item {
-    flex-direction: column;
     gap: 12px;
   }
 
