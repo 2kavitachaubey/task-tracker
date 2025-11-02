@@ -12,7 +12,7 @@ const TaskItem = ({ task }) => {
   const toggleComplete = () => {
     setTasks(
       tasks.map((value) =>
-        value.id === task.id ? { ...value, completed: !value.completed } : t
+        value.id === task.id ? { ...value, completed: !value.completed } : value
       )
     );
   };
@@ -29,18 +29,18 @@ const TaskItem = ({ task }) => {
       return;
     }
     setTasks(
-      tasks.map((value) => {
+      tasks.map((value) => 
         value.id === task.id
           ? { ...value, title: editTitle, description: editDescription }
-          : value;
-      })
+          : value
+      )
     );
-    setError("");
+    setEditErrors("");
     setIsEditing(false);
   };
 
   return (
-    <li className={`task-item ${task.completed ? "completed" : ""}`}>
+    <li className={`task-item ${task.completed ? "completed" : ""} ${isEditing ? "editing": ""}`}>
       <div className="task-content">
         {isEditing ? (
           <div className="edit-section">
@@ -50,7 +50,7 @@ const TaskItem = ({ task }) => {
               value={editTitle}
               onChange={(e) => {
                 setEditTitle(e.target.value);
-                if (editErrors) setError("");
+                if (editErrors) setEditErrors("");
               }}
               className={editErrors && editTitle.trim() === "" ? "error-input" : ""}
             />
@@ -61,7 +61,7 @@ const TaskItem = ({ task }) => {
               onChange={(e) => setEditDescription(e.target.value)}
             />
             <button className="save-btn" onClick={saveEdit}>
-              save
+              Save
             </button>
           </div>
         ) : (

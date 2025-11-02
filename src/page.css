@@ -178,6 +178,10 @@ ul {
   border-left-color: #10B981;
 }
 
+.task-item.editing {
+  opacity: 1;
+}
+
 .task-content {
   flex: 1;
 }
