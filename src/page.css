@@ -226,6 +226,7 @@ input[type="checkbox"] {
   border-radius: 8px;
   background-color: #F9FAFB;
   font-size: 1rem;
+  color: #111827;
 }
 
 .edit-section input[type="text"]:focus,
@@ -233,6 +234,7 @@ input[type="checkbox"] {
   outline: none;
   border-color: #3B82F6;
   background-color: #fff;
+  color: #111827;
 }
 
 .save-btn {
@@ -245,7 +247,6 @@ input[type="checkbox"] {
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 .save-btn:hover {
