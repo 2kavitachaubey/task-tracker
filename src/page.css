@@ -167,7 +167,6 @@ ul {
   background-color: #F9FAFB;
   border-radius: 8px;
   border-left: 4px solid #3B82F6;
-  transition: all 0.2s;
 }
 
 .task-item:hover {
@@ -209,18 +208,78 @@ input[type="checkbox"] {
   font-size: 0.95rem;
 }
 
-.delete-btn {
-  background-color: transparent;
+.edit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-section input[type="text"],
+.edit-section textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  background-color: #F9FAFB;
+  font-size: 1rem;
+}
+
+.edit-section input[type="text"]:focus,
+.edit-section textarea:focus {
+  outline: none;
+  border-color: #3B82F6;
+  background-color: #fff;
+}
+
+.save-btn {
+  align-self: flex-start;
+  background-color: #10B981;
+  color: white;
   border: none;
-  font-size: 1.3rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
-  padding: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.save-btn:hover {
+  background-color: #059669;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px;
   border-radius: 6px;
 }
 
-.delete-btn:hover {
-  background-color: #FEE2E2;
+.edit-btn{
+  font-size: 14px;
+  opacity: 0.7;
 }
+
+.delete-btn{
+  font-size: 18px;
+}
+
+.edit-btn:hover {
+  color: #3B82F6;
+}
+
+.delete-btn:hover {
+  color: #DC2626;
+}
+
 
 .task-list > ul > p {
   text-align: center;
