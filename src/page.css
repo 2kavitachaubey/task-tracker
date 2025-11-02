@@ -81,6 +81,7 @@ input[type="text"]:focus,
 textarea:focus {
   outline: none;
   border-color: #10B981;
+  color : #111827;
   background-color: white;
 }
 
